@@ -10,7 +10,7 @@ app = FastAPI(title="Patient Tracker",
               description="Tracks patients' records with FastAPi",
               version="1.0.0")
 
-@app.post("/patients/", response_model = schemas.StudentResponse)
+@app.post("/patients/", response_model = schemas.PatientResponse)
 def create_patient(patient: schemas.PatientCreate, db: Session = Depends(get_db)):
     """Adds new patient records"""
     return crud.create_patient(db, patient)

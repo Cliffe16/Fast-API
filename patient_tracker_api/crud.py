@@ -7,7 +7,7 @@ def create_patient(db: Session, patient: schemas.PatientCreate):
     db.add(db_patient)
     db.commit()
     db.refresh
-    return db_student
+    return db_patient
 
 def get_patient(db: Session, patient_id: int):
     """Gets a single patient's record"""

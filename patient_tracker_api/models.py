@@ -8,5 +8,5 @@ class Patient(Base):
     name = Column(String, nullable=False)
     phone = Column(String, nullable=False, unique=True)
     doctor = Column(String, nullable=False)
-    appointment_date = Column(String, nullalbe=False)
+    appointment_date = Column(String, nullable=False)
     status = Column(String, default="scheduled")
